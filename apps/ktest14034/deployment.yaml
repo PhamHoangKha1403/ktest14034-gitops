@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ktest14034
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ktest14034
+  template:
+    metadata:
+      labels:
+        app: ktest14034
+    spec:
+      containers:
+        - name: app
+          image: phamhoangkha1403/phamhoangkha1403:@sha256:ed0c8ed931aa3a64ee64593998433c10ae38a1be0516eb8290f9f4dc24fd05b0
+          ports:
+            - containerPort: 8080
